@@ -55,8 +55,8 @@ Fingerprint SMB Version(smbclient -L //192.168.1.100)
 
 ### Useful Metasploit Scan
 ```
-use scanner/ftp/ftp_version
-use scanner/ssh/ssh_version
+scanner/ftp/ftp_version
+scanner/ssh/ssh_version
 scanner/mssql/mssql_ping
 scanner/smb/smb_version
 auxiliary/scanner/misc/oki_scanner                                 
@@ -69,9 +69,9 @@ auxiliary/scanner/snmp/snmp_enumusers
 auxiliary/scanner/snmp/snmp_login                                 
 auxiliary/scanner/snmp/snmp_set 
 auxiliary/gather/enum_dns
-use auxiliary/scanner/http/http_version			
-use auxiliary/scanner/http/tomcat_enum
-use auxiliary/scanner/ssh/ssh_users			 
-use auxiliary/scanner/ssh/ssh_login	
+auxiliary/scanner/http/http_version			
+auxiliary/scanner/http/tomcat_enum
+auxiliary/scanner/ssh/ssh_users			 
+auxiliary/scanner/ssh/ssh_login	
 auxiliary/scanner/http/joomla_plugins
 ```
