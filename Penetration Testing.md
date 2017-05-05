@@ -104,3 +104,17 @@ dnsrecon -d 1.1.1.1
 nslookup -> set type=any -> ls -d blah.com
 dig axfr blah.com @ns1.blah.com
 ```
+
+### Wfuzz Web application fuzzer
+
+```
+wfuzz -c -z file,/usr/share/wfuzz/wordlist/general/common.txt --hc 404 http://192.168.1.202/FUZZ
+wfuzz -c -z file,/usr/share/wfuzz/wordlist/vulns/sql_inj.txt --hc 404 http://192.168.1.202/FUZZ
+wfuzz -c -z file,/usr/share/wfuzz/wordlist/vulns/sql_inj.txt --hc 404 www.kbccp.org/hot_events.php?id=3/FUZZ
+wfuzz -c -z file,/usr/share/wfuzz/wordlist/vulns/sql_inj.txt --hc 404 www.kbccp.org/hot_events.php?id=3/FUZZ
+wfuzz -c -z file,/usr/share/wfuzz/wordlist/vulns/sql_inj.txt --hc 404 www.kbccp.org/hot_events.php?id=3/FUZZ
+wfuzz -c -z file,/usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt --hc 404  www.kernellix.com/FUZZ
+wfuzz.py -c -v -w wordlist/general/common.txt --hc 404 https://portswigger.net/FUZZ
+wfuzz -c -v -z file,wordlist/Injections/SQL.txt --hc 404 http://www.example.com/index.php?id=FUZZ
+wfuzz -c -z -v --sc 200 -z file,pass.txt -d "username=admin&password=FUZZ" http://example.com/login.php
+```
