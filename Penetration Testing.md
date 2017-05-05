@@ -75,3 +75,32 @@ auxiliary/scanner/ssh/ssh_users
 auxiliary/scanner/ssh/ssh_login	
 auxiliary/scanner/http/joomla_plugins
 ```
+
+### DNS Recon and MX Record
+
+```
+nslookup -query=mx redhat.com
+nslookup -type=ns redhat.com
+nslookup -type=soa redhat.com
+nslookup -type=any google.com
+Using Specific DNS server
+nslookup redhat.com ns1.redhat.com
+nslookup -port 56 redhat.com
+nslookup -debug redhat.com
+whois domain-name-here.com
+Perform DNS IP Lookup (dig a domain-name-here.com @nameserver )
+Perform MX Record Lookup (dig mx domain-name-here.com @nameserver)
+Perform Zone Transfer with DIG(dig axfr domain-name-here.com @nameserver)
+dig 1.1.1.1 -t any
+dig 1.1.1.1 -t mx
+dig 1.1.1.1 -t axfr
+dig -x 1.1.1.1
+
+dnsrecon -d 1.1.1.1
+```
+
+### DNS Zone Transfers
+```
+nslookup -> set type=any -> ls -d blah.com
+dig axfr blah.com @ns1.blah.com
+```
