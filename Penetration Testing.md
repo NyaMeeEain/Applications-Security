@@ -110,11 +110,22 @@ dig axfr blah.com @ns1.blah.com
 ```
 wfuzz -c -z file,/usr/share/wfuzz/wordlist/general/common.txt --hc 404 http://192.168.1.202/FUZZ
 wfuzz -c -z file,/usr/share/wfuzz/wordlist/vulns/sql_inj.txt --hc 404 http://192.168.1.202/FUZZ
-wfuzz -c -z file,/usr/share/wfuzz/wordlist/vulns/sql_inj.txt --hc 404 www.kbccp.org/hot_events.php?id=3/FUZZ
-wfuzz -c -z file,/usr/share/wfuzz/wordlist/vulns/sql_inj.txt --hc 404 www.kbccp.org/hot_events.php?id=3/FUZZ
-wfuzz -c -z file,/usr/share/wfuzz/wordlist/vulns/sql_inj.txt --hc 404 www.kbccp.org/hot_events.php?id=3/FUZZ
-wfuzz -c -z file,/usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt --hc 404  www.kernellix.com/FUZZ
 wfuzz.py -c -v -w wordlist/general/common.txt --hc 404 https://portswigger.net/FUZZ
 wfuzz -c -v -z file,wordlist/Injections/SQL.txt --hc 404 http://www.example.com/index.php?id=FUZZ
 wfuzz -c -z -v --sc 200 -z file,pass.txt -d "username=admin&password=FUZZ" http://example.com/login.php
+```
+### Blute Force Netwrok Service
+
+```
+hydra -t 5 -V -f -l root -P common.txt ftp://192.168.67.132
+hydra -t 1 -V -f -l administrator -P common.txt rdp://192.168.67.132
+hydra -t 5 -V -f -l root -P common.txt localhost ssh
+hydra -t 5 -V -f -l root -e ns -P common.txt localhost mysql
+
+hydra -l USERNAME -P /usr/share/wordlistsnmap.lst -f 192.168.X.XXX ftp -V
+
+hydra -l USERNAME -P /usr/share/wordlistsnmap.lst -f 192.168.X.XXX pop3 -V
+
+hydra -P /usr/share/wordlistsnmap.lst 192.168.X.XXX smtp -V
+
 ```
