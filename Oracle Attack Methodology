@@ -13,3 +13,10 @@ auxiliary/admin/oracle/sid_brute
 auxiliary/scanner/http/oracle_ilom_login
 
 ```
+
+### HTML Injection - Reflected (POST)
+
+```
+<h1>Hello</h1>
+<h2>World</h2>
+```
