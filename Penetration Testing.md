@@ -35,7 +35,7 @@ nmap -Pn -p80 --script=http-headers strategicsec.com
 nmap -sS -sU -PN -p 1-65535 192.168.0.164(TCP SYN and UDP)
 ```
 
-###Enumeration & Attacking Network Services
+### Enumeration & Attacking Network Services
 
 ```
 SNMP Enumeration
@@ -51,4 +51,27 @@ enum4linux target
 nbtscan 192.168.1.0/24
 enum4linux -a target-ip
 Fingerprint SMB Version(smbclient -L //192.168.1.100)
+```
+
+### Useful Metasploit Scan
+```
+use scanner/ftp/ftp_version
+use scanner/ssh/ssh_version
+scanner/mssql/mssql_ping
+scanner/smb/smb_version
+auxiliary/scanner/misc/oki_scanner                                 
+auxiliary/scanner/snmp/aix_version                                 
+auxiliary/scanner/snmp/cisco_config_tftp                            
+auxiliary/scanner/snmp/cisco_upload_file                            
+auxiliary/scanner/snmp/snmp_enum                                   
+auxiliary/scanner/snmp/snmp_enumshares                             
+auxiliary/scanner/snmp/snmp_enumusers                              
+auxiliary/scanner/snmp/snmp_login                                 
+auxiliary/scanner/snmp/snmp_set 
+auxiliary/gather/enum_dns
+use auxiliary/scanner/http/http_version			
+use auxiliary/scanner/http/tomcat_enum
+use auxiliary/scanner/ssh/ssh_users			 
+use auxiliary/scanner/ssh/ssh_login	
+auxiliary/scanner/http/joomla_plugins
 ```
