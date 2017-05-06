@@ -149,3 +149,16 @@ p0f -i eth0 -p
 p0f -i eth1 âvto output.txt
 ping x.x.x.x
 ```
+
+### VOIP Assessment
+
+```
+auxiliary/scanner/sip/options
+auxiliary/scanner/sip/vsipinvate
+smap 192.168.1.104 (Scanning a single host)
+smap 192.168.1.130/24(Scanning a range of IP )
+smap -O 192.168.1.104 ( SMAP to fingerprint the server/client type and version)
+sip-scan -i eth0 192.168.1.1-254(Scanning a subnet)
+svmap.py 192.168.1.1-254(Scanning an IP range)
+svmap.py 192.168.1.1-254 --fp(fingerprinting scanning)
+```
