@@ -33,6 +33,7 @@ nmap -p80 --script dns-brute strategicsec.com
 nmap --script http-robtex-reverse-ip secore.info
 nmap -Pn -p80 --script=http-headers strategicsec.com
 nmap -sS -sU -PN -p 1-65535 192.168.0.164(TCP SYN and UDP)
+nmap --script http-methods
 ```
 
 ### Enumeration & Attacking Network Services
