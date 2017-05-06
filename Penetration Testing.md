@@ -141,3 +141,11 @@ Step-3 Crack password hashes using John the Ripper
 john --format=nt2 hash.txt
 Step-4  View the hash file To view cracking Password 
 ```
+
+### Passive Operating System Fingerprinting
+
+```
+p0f -i eth0 -p
+p0f -i eth1 âvto output.txt
+ping x.x.x.x
+```
