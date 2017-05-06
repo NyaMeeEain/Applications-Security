@@ -161,4 +161,5 @@ smap -O 192.168.1.104 ( SMAP to fingerprint the server/client type and version)
 sip-scan -i eth0 192.168.1.1-254(Scanning a subnet)
 svmap.py 192.168.1.1-254(Scanning an IP range)
 svmap.py 192.168.1.1-254 --fp(fingerprinting scanning)
+### http://www.backtrack-linux.org/wiki/index.php/Pentesting_VOIP
 ```
