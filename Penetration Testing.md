@@ -139,5 +139,5 @@ Step-2 -samdump2 SAM /root/Destop/sample.txt > /root/hash.txt
 
 Step-3 Crack password hashes using John the Ripper
 john --format=nt2 hash.txt
-Step-3  View the hash file To view cracking Password 
+Step-4  View the hash file To view cracking Password 
 ```
