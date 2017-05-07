@@ -77,6 +77,11 @@ auxiliary/scanner/http/tomcat_enum
 auxiliary/scanner/ssh/ssh_users			 
 auxiliary/scanner/ssh/ssh_login	
 auxiliary/scanner/http/joomla_plugins
+auxiliary/scanner/http/wordpress_scanner
+auxiliary/scanner/http/joomla_version
+
+
+
 ```
 
 ### DNS Recon and MX Record
