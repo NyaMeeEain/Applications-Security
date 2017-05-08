@@ -179,3 +179,12 @@ svmap.py 192.168.1.1-254(Scanning an IP range)
 svmap.py 192.168.1.1-254 --fp(fingerprinting scanning)
 ### http://www.backtrack-linux.org/wiki/index.php/Pentesting_VOIP
 ```
+### useful curl
+
+```
+curl -L http://www.google.com (HTTP Location Headers with -L option)
+curl -I 
+curl -x http://10.10.10.10:8080 -L http://sample.com (Local Proxy)
+curl -v https://google.com (Testing a connection to a remote site)
+curl -I -H 'Accept-Encoding: gzip,deflate' http://example.com/index.php (Checking Header)
+```
