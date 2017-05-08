@@ -36,6 +36,7 @@ nmap -sS -sU -PN -p 1-65535 192.168.0.164(TCP SYN and UDP)
 nmap --script http-methods
 nmap -p 80 --script dns-brute.nse 
 nmap --script http-enum
+ nmap -Pn -p80 --script=http-headers x.x.x.x
 ```
 
 ### VPN Accessment 
