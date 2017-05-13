@@ -114,12 +114,19 @@ dig 1.1.1.1 -t axfr
 dig -x 1.1.1.1
 
 dnsrecon -d 1.1.1.1
+dnsenum nintendo.com
+host -t ns megacorpone.com
+host -t mx megacorpone.com
+host idontexist.megacorpone.com
 ```
 
 ### DNS Zone Transfers
 ```
 nslookup -> set type=any -> ls -d blah.com
 dig axfr blah.com @ns1.blah.com
+host -l megacorpone.com ns1.megacorpone.com
+host -l megacorpone.com ns2.megacorpone.com
+dnsrecon -d megacorpone.com -t axf
 ```
 
 ### Wfuzz Web application fuzzer
