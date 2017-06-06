@@ -17,4 +17,6 @@ tcpdump -nni eth0 -A port 80 and 'tcp[13] & 8!=0'
 tcpdump -nni eth0 -A src port 80
 
 tcpdump -s0 -X dst port 80
+
+tshark -i eth0-Y http.request -T fields -e http.host -e http.user_agent
 ```
