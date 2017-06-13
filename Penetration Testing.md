@@ -13,6 +13,15 @@ auxiliary/admin/oracle/sid_brute
 auxiliary/scanner/http/oracle_ilom_login
 ```
 
+###SMB service
+
+```
+auxiliary/scanner/smb/smb_login
+use auxiliary/scanner/smb/smb_enumusers
+exploit/windows/smb/psexec 
+```
+
+
 ### MSSQL
 
 ```
