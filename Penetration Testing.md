@@ -17,9 +17,11 @@ auxiliary/scanner/http/oracle_ilom_login
 
 ```
 nmap -sU --script=ms-sql-info 192.168.1.108 192.168.1.156
-auxiliary/scanner/mssql/mssql_ping
 auxiliary/admin/mssql/mssql_enum
 auxiliary/scanner/oracle/tnspoison_checker
+auxiliary/scanner/mssql/mssql_ping
+exploit/windows/mssql/mssql_payload
+
 ```
 
 ### Nmap Advance Scan
