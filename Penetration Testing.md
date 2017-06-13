@@ -13,7 +13,7 @@ auxiliary/admin/oracle/sid_brute
 auxiliary/scanner/http/oracle_ilom_login
 ```
 
-###SMB service
+### SMB service Exploit 
 
 ```
 auxiliary/scanner/smb/smb_login
