@@ -49,18 +49,6 @@ objc_msgSend(theReceiver,theSelector, @"RUB");
 /var/mobile/Containers/Data/Application/<UUID>/tmp/
 
 
-## Environment setup:
-
-apt-get install inetutils syslogd less com.autopear.installipa class-dump com.ericasadun.utilities odcctools cycript sqlite3 adv-cmds bigbosshackertools strings coreutils binutils coreutils-bin ldid debianutils busybox darwintools
-
-
-
-## Utils:
-
-
-$ plutil -convert xml1 Info.plist -o -   // outputs XML to stdout
-$ plutil -convert xml1 Info.plist -o Info-xml.plist  // output to file
-$ plutil -convert binary1 Info-xml.plist -o Info-bin.plist  // convert from xml to binary1
 
 ## Read the system logs:
 
@@ -103,57 +91,6 @@ a=choose(CryptoManager) (I saw CryptoManager from class-dump-z output)
 lipo -thin armv7 DamnVulnerableIOSApp -output DVIA32
 class-dump DVIA32
 
-
-
-## Certificate Validation
-
-> Example accepting self-signed certs using NSURLConnection:
-```
-- (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge: (NSURLAuthenticationChallenge *)challenge 
-{ 
-    if ([challenge.protectionSpace.authenticationMethod 
-isEqualToString:NSURLAuthenticationMethodServerTrust]) 
-    { 
-        [challenge.sender useCredential:[NSURLCredential 
-credentialForTrust:challenge.protectionSpace.serverTrust] 
-forAuthenticationChallenge:challenge]; 
-        [challenge.sender 
-continueWithoutCredentialForAuthenticationChallenge:challenge]; 
-        return; 
-    } 
-} 
-```
-
-> Example accepting self-signed certs using NSURLSession:
-```
-- (void)URLSession:(NSURLSession *)session 
-didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge 
-completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, 
-NSURLCredential *))completionHandler 
-{ 
-    if([challenge.protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) 
-    { 
-        NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust]; 
-        completionHandler(NSURLSessionAuthChallengeUseCredential, credential); 
-    } 
-} 
-```
-
-> Example disabling certificate checks using Carbon Framework:
-```
-NSDictionary *sslSettings = [NSDictionary dictionaryWithObjectsAndKeys: 
-(id)kCFBooleanFalse, (id)kCFStreamSSLValidatesCertificateChain, nil]; 
-CFReadStreamSetProperty(readStream, kCFStreamPropertySSLSettings, sslSettings);
-```
-
-When an application is using the Secure Transport API, you may find that the kSSLSessionOptionBreakOnServerAuth option is set on the SSL session. This disables the API’s built-in certificate validation but does not necessarily mean that the application does not implement its own custom trust evaluation routines, and therefore you should further explore the code to check for implantation of chain validation code. 
-
-> Example disabling built-in certificate validation with Secure Transport API:
-```
-SSLSetSessionOption(ssl_ctx->st_ctxr, kSSLSessionOptionBreakOnServerAuth, true) 
-```
-
-If a developer needs to weaken certificate validation (for example, during development) using CFNetwork or the Secure Transport API, Apple recommends implementing a custom certificate validation routine using the Trust Services API.
 
 
 ## SSL Network Security
