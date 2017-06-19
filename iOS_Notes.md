@@ -1,3 +1,27 @@
+### Decrypting iOS Applications (AppStore Binaries)
+---
+otool -l LinkedIn | grep LC_ENCRYPTION_INFO -A 4
+
+gdb attach <app_name>
+
+gdb attach facebook
+
+
+Clutch -i (installed)
+Clutch -d <app-id from Application ID>
+Clutch -d 3 (To derypt LinkedIn)
+otool -Iv <appbinary>| grep objc_
+otool -Iv facebook | grep objc_
+
+_objc_retain
+_objc_release
+_objc_storeStrong
+_objc_releaseReturnValue
+_objc_autoreleaseReturnValue
+_objc_retainAutoreleasedReturnValue
+
+
+
 grep for NSURLConnection, NSURLSession, NSURLCredential, dataWithContentsOfURL
 
 grep for UIWebView, shouldStartLoadWithRequest // maybe iOS-Javascript bridge here
@@ -21,6 +45,8 @@ grep for "CLocationManager" // GeoLocation data shouldn't be stored... If it is,
 grep for "NSLog" // logging sensitive information should be avoided
 
 grep for "UIPasteboard" // review the interaction with the generalPasteboard
+
+---
 
 ## Swift:
 
