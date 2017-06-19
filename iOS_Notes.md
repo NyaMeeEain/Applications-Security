@@ -81,6 +81,23 @@ socat - UNIX-CONNECT:/var/run/lockdown/syslog.sock
 8. $ otool -l application | grep -A 4 LC_ENCRYPT
 
 
+###  Application Debugging and Runtime Manipulation
+```
+SSH into the iOS device, and get the process id of the application using the command “ps aux”.
+ps aux | grep -i myapp
+“cycript -p <process-id>” to hook on to the application
+
+cycript -p 1234
+
+./class-dump-z -z TestApp
+
+cycript -p TestApp
+
+a=choose(CryptoManager) (I saw CryptoManager from class-dump-z output)
+```
+
+
+
 ## From FAT Binary to Thin using lipo:
 
 lipo -thin armv7 DamnVulnerableIOSApp -output DVIA32
