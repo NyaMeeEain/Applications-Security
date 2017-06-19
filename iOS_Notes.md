@@ -180,6 +180,8 @@ Application data such as usernames and passwords are going to be cached as well 
 
 ## Format String Vulnerabilities
 
+```
+
 NSLog
 
 [NSString stringWithFormat]
@@ -202,7 +204,7 @@ NSLog
 
 NSRunAlertPanel
 
-
+```
 
 
 +] Dynamic Analysis:
