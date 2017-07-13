@@ -21,3 +21,24 @@ SQL injection attacks
 Cryptanalysis attacks
 
 ```
+
+
+### Important Recommendation for Cloud Penetration Testing
+
+```
+1.Authenticate users with User name and Password.
+
+2. Secure the coding policy by giving attention Towards Services Providers Policy
+
+3.Strong Password Policy must be Advised.
+
+4.Change Regularly by Organization such as user account name, password assigned by the cloud Providers.
+
+5.Protect information which is uncovered during the Penetration Testing.
+
+6. Password Encryption Advisable.
+
+7. Use centralized Authentication or single sign-on for SaaS Applications.
+
+8.Ensure the Security Protocols are up to date and Flexible.
+```
