@@ -20,6 +20,16 @@ auxiliary/scanner/smb/smb_login
 use auxiliary/scanner/smb/smb_enumusers
 exploit/windows/smb/psexec 
 ```
+### null sessions
+```
+nmap –script smb-enum-users.nse –p 445
+rpcclient –U “” [target IP address]
+querydominfo
+enumdomusers
+> queryuser [username] # queryuser msfadmin
+enum4linux 192.168.200.129
+smbclient //192.168.0.14/tmp
+```
 ### SNMP Service Exploit
 
 ```
