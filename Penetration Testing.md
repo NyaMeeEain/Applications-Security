@@ -248,3 +248,12 @@ OS finger Print
 Specific Source Ports to Bypass Filtering
 hping2 -c 3 -s 53 -p 139 -S 192.168.0.1
 ```
+
+### SMTP User enumeration
+
+```
+smtp-user-enum -M VRFY -U users.txt -t 10.0.0.1
+smtp-user-enum -M VRFY -u root -t 10.0.0.1
+smtp-user-enum -M RCPT -U users.txt -T mail-server-ips.txt
+smtp-user-enum -M EXPN -D example.com -U users.txt -t 10.0.0.1
+```
