@@ -2,6 +2,17 @@
 ### useful curl
 
 ```
+curl -s -I http://example.org | grep '^HTTP'
+curl -s -I https://example.org | grep '^HTTP'
+curl -s -I https://example.org | grep '^Strict'
+curl --sslv3 https://example.org
+curl --tlsv1.0 -I https://example.org
+curl --tlsv1.1 -I https://example.org
+curl --tlsv1.2 -s -I https://example.org | grep 'HTTP'
+curl -s -I https://example.org | grep '^X-Frame-Options'
+curl -s -I https://example_2.org | grep '^X-Frame-Options'
+curl -s -I https://example.org | grep '^X-Content'
+curl -s -I example.com/url_that_sets_cookie | grep '^Set-Cookie'
 nmap -p 443,80 --script http-security-headers
 curl -I -L --url <target domain or IP>
 curl -L http://www.google.com (HTTP Location Headers with -L option)
