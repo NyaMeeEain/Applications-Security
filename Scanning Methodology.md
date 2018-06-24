@@ -13,6 +13,13 @@ curl -X OPTIONS -Ix.x.x.x
 curl -vX HEAD x.x.x.x
 use auxiliary/gather/f5_bigip_cookie_disclosure
 wafw00f meet.kbzbank.com
+curl -v -X TRACE http://www.commercefun.com
+curl -v -X OPTIONS http://www.commercefun.com
+curl -v -X HEAD http://www.commercefun.com
+curl -v -X GET http://www.commercefun.com
+curl -v -X POST http://www.commercefun.com/secret
+curl -v -X GET http://www.commercefun.com/secret
+
 
 
 nmap --script http-robtex-reverse-ip secore.info
