@@ -1,4 +1,4 @@
-#### Blind SQL Injection
+#### Timbe Base SQL Injection
 
 ```
 http://45.77.162.239/book.php?id=2; IF (LEN(USER)=1) WAITFOR DELAY '00:00:10'--
