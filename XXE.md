@@ -14,7 +14,6 @@
 # blind XXE
 
 * cat /var/www/dtd.xml
-
 * nc -nlvp 775
 ```
 
