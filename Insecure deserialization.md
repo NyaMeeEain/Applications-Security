@@ -26,6 +26,8 @@ view state is the technique used by an ASP.NET Web page to persist changes to th
 technically ViewState is used to store user data on page at the time of post back of web page however ViewState does not hold the controls,it holds the values of controls.
 When tthe page is accessed, the current state of the page and values that need to be retained during postback are serialized into base64-encoded strings and output in the ViewState hidden field or fields.
 
+**It might be possible to execute arbitrary OS Command In the context of applicaiton server if MAC doesn't enforce to enable in the viewstate parameter.**
+
 * Base64 **Can be defined using EnableViewStateMac and ViewStateEncryptionMode attribute set to false**
 * Base64 + MAC (Message Authentication Code) **Enabled Can be defined using EnableViewStateMac attribute set to true**
 * Base64 + Encrypted **Can be defined using viewStateEncryptionMode attribute set to true**
