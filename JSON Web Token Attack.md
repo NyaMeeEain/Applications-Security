@@ -1,4 +1,6 @@
 JSON Web Token is a compact mechanism used for transferring claims between two Endpoint to protect the integrity of the underlying message using a Message Authentication Code (MAC) encrypted. A JSON Web Token consists of three parts; an encoded Header, an encoded Payload and the Signature.
+
+
 * The Header contains metadata, defines the type of token and the algorithm used for encryption of Payload.
 * The Payload contains the claims to routes and services in value key pairs. 
 * The signature is calculated by encrypting the base64UrlEncoded values of Header and Payload using a secret Key
