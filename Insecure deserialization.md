@@ -28,6 +28,8 @@ When tthe page is accessed, the current state of the page and values that need t
 
 **It might be possible to execute arbitrary OS Command In the context of applicaiton server if MAC doesn't enforce to enable in the viewstate parameter.**
 
+This format seems to be standardized for all Viewstate implementations in the ASP.Net Application.
+
 * Base64 **Can be defined using EnableViewStateMac and ViewStateEncryptionMode attribute set to false**
 * Base64 + MAC (Message Authentication Code) **Enabled Can be defined using EnableViewStateMac attribute set to true**
 * Base64 + Encrypted **Can be defined using viewStateEncryptionMode attribute set to true**
