@@ -1,6 +1,6 @@
 
-JSON Web authentication
-Sep 28, 2016
+# JSON Web authentication
+
 
 JSON Web Tokens used by most modern web applications instead of using session base cookies claims between two Endpoint to protect the integrity of the underlying message using a Message Authentication Code (MAC) encrypted. A JSON Web Token consists of three parts; an encoded Header, an encoded Payload and the Signature.
 
