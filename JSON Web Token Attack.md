@@ -9,7 +9,7 @@ JSON Web Token is a compact mechanism used for transferring claims between two E
 
 
 
-### HMAC secretKey  Brute-force attacks Using Known Wordlist attacks
+### HMAC Secret Key Brute-forcing 
 The algorithm HS256 uses the secret key to sign and verify each message. The algorithm RS256 uses the private key to sign the message and uses the public key for authentication
 
 ```
