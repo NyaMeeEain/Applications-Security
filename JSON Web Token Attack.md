@@ -10,7 +10,7 @@ JSON Web Token is a compact mechanism used for transferring claims between two E
 
 
 ### HMAC Secret Key Brute-forcing 
-The algorithm HS256 uses the secret key to sign and verify each message. The algorithm RS256 uses the private key to sign the message and uses the public key for authentication
+The algorithm HS256 uses a secret key to sign and verify each message. The algorithm RS256 uses a private key to sign messages, and a public key to verify them and uses the public key for authentication.
 
 ```
 python3 jwtcat.py -t eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqd3QiOiJwd24ifQ.4pOAm1W4SHUoOgSrc8D-J1YqLEv9ypAApz27nfYP5L4 -w /usr/share/wordlists/rockyou.txt
