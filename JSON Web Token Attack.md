@@ -1,3 +1,8 @@
+JSON Web Token is a compact mechanism used for transferring claims between two Endpoint to protect the integrity of the underlying message using a Message Authentication Code (MAC) encrypted. A JSON Web Token consists of three parts; an encoded Header, an encoded Payload and the Signature.
+
+
+
+
 
 ### HMAC secretKey  Brute-force attacks Using Known Wordlist attacks
 The algorithm HS256 uses the secret key to sign and verify each message. The algorithm RS256 uses the private key to sign the message and uses the public key for authentication
