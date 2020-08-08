@@ -26,7 +26,8 @@ python jwt2john.py eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqd3QiOiJwd24ifQ.4pOAm
 ```
 
 # JSON Public Keys
-To acuire Public Key using openssl client
+The algorithm HS256 uses a secret key to sign and verify each message. The algorithm RS256 uses a private key to sign messages,
+**To obtain the Public Key using openssl client**
 ```
 TARGET_HOST="demo.resilient.ninja"
 TARGET_PORT="443"
