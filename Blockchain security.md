@@ -17,16 +17,15 @@ And we know that there are many blockchain projects, but we can roughly divide t
 # blockchain terminology 
 **There are several terminology in blockchaing you have to familar with each terminology**
 ### 1  Decentralization
-```
+
 The resources and services of the blockchain are distributed on all participating nodes, and the consistency of the blockchain network is maintained through the consensus mechanism, without the existence of a central system.
-```
+
 
 ### 2 Robustness
 
-```
 The blockchain network has no central node, so there is no target of attack. Participating nodes are distributed in the network, and the destruction of some nodes has no impact on the blockchain system.
 
-```
+
 ### 3 Scalability
 
 Blockchain nodes can join and exit freely, and the network system can expand freely according to the nodes.
