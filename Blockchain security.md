@@ -1,8 +1,7 @@
-# Blockchain security and the underlying concept
+# Blockchain Technology From a CyberSecurity perspective
 Blockchain technology relies heavily on P2P networks. there would be no current development of blockchain. The blockchain has a decentralized application theory, so it has strict security requirements for the P2P process.
 
 # What is P2P?
-
 P2P ( peer-to-peer ) network is also called peer-to-peer network, or peer-to-peer network. This is an Internet system where there is no central server and information is exchanged entirely by user groups. Each user of the P2P network is a client and also has the function of a server. Before P2P technology, all our network applications were implemented using C/S or B/S architecture. However, in the previous C/S architecture applications, the client software sent a request to the server, and the server then made a request to the client. Respond. In this case, if there are more clients, the pressure on the server will increase. However, each computer implemented by P2P technology is both a client and a server, and their functions are equal. For computers installed with P2P software (such as Thunder, QQ, etc.) to join a common P2P network, data transmission and communication can be directly carried out between nodes in the network.
 
 
@@ -29,21 +28,19 @@ The blockchain network has no central node, so there is no target of attack. Par
 
 ```
 ### 3 Scalability
-```
+
 Blockchain nodes can join and exit freely, and the network system can expand freely according to the nodes.
 
 
-```
-
 ### 4 Privacy protection
-```
+
 The block information uses a broadcast mechanism, which cannot locate the initial node of the broadcast, prevents user communications from being monitored, and protects user privacy
-```
+
 
 ### 5 Load balancing
-```
+
 Blockchain avoids resource load and network congestion by limiting the number of node connections and other configurations
-```
+
 
 # Centralized P2P network
 There is a " central server " in the centralized network , and its role is to save the address information of the access node. If two peers want to communicate, they can request each other's address through the central server. For example:
