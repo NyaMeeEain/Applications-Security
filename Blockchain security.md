@@ -63,3 +63,5 @@ The biggest problem with full distributed is the node address management. There 
 
 * [The Truth About Blockchain](https://hbr.org/2017/01/the-truth-about-blockchain)
 
+* [Blockchain beyond the hype](https://www.mckinsey.com/business-functions/mckinsey-digital/our-insights/blockchain-beyond-the-hype-what-is-the-strategic-business-value#)
+
