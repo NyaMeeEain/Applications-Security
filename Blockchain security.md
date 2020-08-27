@@ -70,7 +70,9 @@ This routing protocol ensures that payment senders can construct and communicate
 * Except for the previous hop and next hop, they cannot understand any other nodes that are part of the path.
 
 * They cannot identify the length of the payment path, or their own position in the path.
-
+# Sphinx protocol
+Sphinx has many similarities with the well-known anonymization communication tool Tor (Onion Routing). Like Tor, all data packets sent using Sphinx can be encrypted-including the receiving IP address. Then this encryption has to be performed several times, until multiple'encryption layers' are generated (so the'onion' is used to compare Tor).
+By using clever encryption techniques, all encryption layers are applied, so that each intermediary along the route towards the final encrypted packet destination can only open one'encryption layer'. This layer will show the intermediary where to turn this encrypted packet. (Compared with Tor, Sphinx uses an improved encryption algorithm and creates a fixed-size data packet to better obscure the location of nodes in the route.)
 
 # References
 * [8btc](https://www.8btc.com/article/113116)
