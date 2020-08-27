@@ -56,6 +56,22 @@ Bitcoin uses this P2P network structure. Fully distributed allows anyone and any
 # 3. Fully distributed structured P2P network
 The biggest problem with full distributed is the node address management. There are no fixed rules between nodes, and node information cannot be accurately located. It can only be searched through flooding query, which consumes a lot of network. The structured network uses a distributed hash table (DHT) to standardize different node addresses into standard length data through encrypted hash functions such as the Hash function
 
+
+# The application of P2P in the blockchain
+
+public chains like Bitcoin and Ethereum require nodes to enter and exit freely, so there is no possibility of using P2P encryption.
+For the problem of dealing with the privacy of the blockchain, the most promising solution is the Lightning Network + Sphinx protocol.
+The essence of the Lightning Network is to establish a two-way flow of micro-payment channels outside the Bitcoin main chain, and coins can be transferred across nodes. Put a large number of small amounts on the Lightning Network to reduce the load on the main chain and increase the speed of small transactions.
+The Lightning Network implements an onion routing protocol based on a scheme called Sphinx.
+This routing protocol ensures that payment senders can construct and communicate paths through the Lightning Network, enabling:
+
+* The intermediate node can verify and decrypt part of its routing information and find the next hop.
+
+* Except for the previous hop and next hop, they cannot understand any other nodes that are part of the path.
+
+* They cannot identify the length of the payment path, or their own position in the path.
+
+
 # References
 * [8btc](https://www.8btc.com/article/113116)
 
