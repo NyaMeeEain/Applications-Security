@@ -44,3 +44,18 @@ The block information uses a broadcast mechanism, which cannot locate the initia
 ```
 Blockchain avoids resource load and network congestion by limiting the number of node connections and other configurations
 ```
+
+# Centralized P2P network
+There is a " central server " in the centralized network , and its role is to save the address information of the access node. If two peers want to communicate, they can request each other's address through the central server. For example:
+the music file is associated with the node where the file is saved. When the user searches for a certain piece of music, the central server informs the storage node address, and the user connects point-to-point to obtain the music. It can be seen that the central server is used to provide address index (central servers of other architectures provide all services). If it fails, the entire system is paralyzed.
+
+
+# 2. Fully distributed unstructured P2P network
+Because it does not have a central index server, each machine is truly peer-to-peer in the network, acting as both a client and a server.
+
+Fully distributed P2P nodes can join and exit freely, and there is no central node. There is no structured unified standard for the node address. The entire network structure is a random graph structure without a fixed network structure graph. However, complete freedom means that new nodes cannot know the P2P network node information, and thus cannot join the network. The more liberalization of the fully distributed P2P network also brings about the problem of node management. Frequent joining and exiting of nodes makes the entire network structure unable to be stable. A large number of broadcast messages not only cause waste of resources, but even block the network.
+
+Bitcoin uses this P2P network structure. Fully distributed allows anyone and any node to participate. Unstructured allows nodes to synchronize block data through the blockchain P2P protocol while maintaining anonymity and privacy protection
+
+# 3. Fully distributed structured P2P network
+The biggest problem with full distributed is the node address management. There are no fixed rules between nodes, and node information cannot be accurately located. It can only be searched through flooding query, which consumes a lot of network. The structured network uses a distributed hash table (DHT) to standardize different node addresses into standard length data through encrypted hash functions such as the Hash function
