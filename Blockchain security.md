@@ -14,3 +14,33 @@ P2P ( peer-to-peer ) network is also called peer-to-peer network, or peer-to-pee
 Having explained so much content, then we will now take out the P2P technology in the blockchain separately and analyze the truth behind it
 **From a technical perspective, blockchain technology is-P2P + consensus mechanism + cryptography** Specifically, the blockchain is the P2P network architecture, which uses cryptography to ensure data security, and uses consensus algorithms to ensure data consistency. For other architectures, failures are inevitable. But for the distributed P2P network of the blockchain, there is basically no single point of failure. Even the frequent advances and retreats of nodes will not affect the entire system.
 And we know that there are many blockchain projects, but we can roughly divide these contents into three categories-public chain, private chain, and consortium chain. The public chain is completely open, so it determines that it will not use P2P encryption in the network. As for the other two (especially the alliance chain), the fact that the nodes cooperate with each other without complete trust makes the P2P network particularly important.
+
+# blockchain terminology 
+**There are several terminology in blockchaing you have to familar with each terminology**
+### 1  Decentralization
+```
+The resources and services of the blockchain are distributed on all participating nodes, and the consistency of the blockchain network is maintained through the consensus mechanism, without the existence of a central system.
+```
+
+### 2 Robustness
+
+```
+The blockchain network has no central node, so there is no target of attack. Participating nodes are distributed in the network, and the destruction of some nodes has no impact on the blockchain system.
+
+```
+### 3 Scalability
+```
+Blockchain nodes can join and exit freely, and the network system can expand freely according to the nodes.
+
+
+```
+
+### 4 Privacy protection
+```
+The block information uses a broadcast mechanism, which cannot locate the initial node of the broadcast, prevents user communications from being monitored, and protects user privacy
+```
+
+### 5 Load balancing
+```
+Blockchain avoids resource load and network congestion by limiting the number of node connections and other configurations
+```
