@@ -57,7 +57,9 @@ Bitcoin uses this P2P network structure. Fully distributed allows anyone and any
 The biggest problem with full distributed is the node address management. There are no fixed rules between nodes, and node information cannot be accurately located. It can only be searched through flooding query, which consumes a lot of network. The structured network uses a distributed hash table (DHT) to standardize different node addresses into standard length data through encrypted hash functions such as the Hash function
 
 # References
-[8btc](https://www.8btc.com/article/113116)
-[Peer-to-Peer overview](http://www.intsci.ac.cn/users/luojw/P2P/ch02.html)
-[The Truth About Blockchain](https://hbr.org/2017/01/the-truth-about-blockchain)
+* [8btc](https://www.8btc.com/article/113116)
+
+* [Peer-to-Peer overview](http://www.intsci.ac.cn/users/luojw/P2P/ch02.html)
+
+* [The Truth About Blockchain](https://hbr.org/2017/01/the-truth-about-blockchain)
 
