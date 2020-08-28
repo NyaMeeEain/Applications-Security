@@ -57,7 +57,7 @@ Bitcoin uses this P2P network structure. Fully distributed allows anyone and any
 The biggest problem with full distributed is the node address management. There are no fixed rules between nodes, and node information cannot be accurately located. It can only be searched through flooding query, which consumes a lot of network. The structured network uses a distributed hash table (DHT) to standardize different node addresses into standard length data through encrypted hash functions such as the Hash function
 
 
-# The application of P2P in the blockchain
+# the blockchain In application 
 
 public chains like Bitcoin and Ethereum require nodes to enter and exit freely, so there is no possibility of using P2P encryption.
 For the problem of dealing with the privacy of the blockchain, the most promising solution is the Lightning Network + Sphinx protocol.
@@ -70,7 +70,7 @@ This routing protocol ensures that payment senders can construct and communicate
 * Except for the previous hop and next hop, they cannot understand any other nodes that are part of the path.
 
 * They cannot identify the length of the payment path, or their own position in the path.
-# Sphinx protocol
+# Sphinx protocol In blockchain
 Sphinx has many similarities with the well-known anonymization communication tool Tor (Onion Routing). Like Tor, all data packets sent using Sphinx can be encrypted-including the receiving IP address. Then this encryption has to be performed several times, until multiple'encryption layers' are generated (so the'onion' is used to compare Tor).
 By using clever encryption techniques, all encryption layers are applied, so that each intermediary along the route towards the final encrypted packet destination can only open one'encryption layer'. This layer will show the intermediary where to turn this encrypted packet. (Compared with Tor, Sphinx uses an improved encryption algorithm and creates a fixed-size data packet to better obscure the location of nodes in the route.)
 
