@@ -1,4 +1,5 @@
-
+DOM based XSS vulnerabilities lies in client-side script.**Regularly DOM XSS is occurred when document object model is modified with attacker controllable part of the DOM** 
+because The client-side scripts within an application's response take data from an attacker controllable part of the DOM.
 ```
 <script> 
 document.getElementsByTagName("Test")[0].innerHTML = "Test";
