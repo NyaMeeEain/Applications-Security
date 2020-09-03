@@ -25,3 +25,10 @@ function CaughtClick()
 document.body.addEventListener('click', CaughtClick, true);
 </script>
 ```
+# The Value of Context is replaced by Executable XXS.
+```
+<script>
+	var pos=document.URL.indexOf("context=")+8;
+	document.write(document.URL.substring(pos,document.URL.length));
+</script>
+```
