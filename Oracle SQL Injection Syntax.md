@@ -1,8 +1,8 @@
 # Real world example of Oracle SQL Injection
-
-The **UTL_INADDR** package provides a PL/SQL procedures to support internet addressing.It provides an API to retrieve host names and IP addresses of local and remote hosts retrieving host names and IP addresses of remote hosts from PL/SQ It contains two functions which return the server machine name and its IP address. 
-When an Web application is being used Oracle Database. there is only possible to perform  SQL Injection PL/SQL Syntax Like **IF condition THEN when_true [ELSE when_false]**
-IF (1=1) THEN dbms_lock.sleep(3); ELSE dbms_lock.sleep(0); END IF; END
+When it come to conducting Orable Base SQL Injection. **The UTL_INADDR PL/SQL procedures is required enabling by default Oracle DBA**.
+It provides an API to retrieve host names and IP addresses of local and remote hosts retrieving host names and IP addresses of remote hosts from PL/SQL.
+When an Web application is being used Oracle Database. there is only possible to perform SQL Injection PL/SQL Syntax.
+**IF condition THEN when_true [ELSE when_false] IF (1=1) THEN dbms_lock.sleep(3); ELSE dbms_lock.sleep(0); END IF; END**
 
 # Basic Oracle Blind SQL Injection Payloads
 ```
