@@ -16,7 +16,7 @@ When an Web application is being used Oracle Database. there is only possible to
 1' or if(1=1, sleep(20), true) -- -
 ```
 # Real world example of Oracle SQL Injection 
-Ths application security assessment was conducted by me 3 year ago. I released My Noted of Oracle Base SQL injection due to having beeb scarce  to make reference to Oracle Base SQL Injectin.
+This application security assessment was conducted by me 3 year ago.I released My Noted of Oracle Base SQL injection due to having been scarce to make reference to Oracle Base SQL Injectin while conducting Oracle Base SQL Injection.
 ```
 POST /B001/process.jsp HTTP/1.1
 Host: 122.248.119.25
