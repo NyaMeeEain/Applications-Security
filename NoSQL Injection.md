@@ -1,5 +1,16 @@
 # NoSQL Injection methodology 
 
+# NoSQL Operators 
+
+```
+$ne — not equal
+$gt — greater than
+$regex — regular expression
+$where — clause lets you specify a script to filter results
+```
+
+
+
 # NoSQL Union Query Injection
 
 Let try to provoke an error by submitting a string accompanied by the single quote (') character, we will come across the following
