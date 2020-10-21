@@ -1,6 +1,5 @@
 # Blockchain Technology From a CyberSecurity perspective
-Blockchain technology relies heavily on P2P networks. there would be no current development of blockchain. The blockchain has a decentralized application theory, so it has strict security requirements for the P2P process.T his A comprehensive Document come out as a result of forcing My Global Manager.
-
+Blockchain technology relies heavily on P2P networks. there would be no current development of blockchain. The blockchain has a decentralized application theory.
 # What is P2P?
 P2P network is an Internet system where there is no central server and information is exchanged entirely by user groups. 
 Each user of the P2P network is a client and also has the function of a server. Before P2P technology, all our network applications were implemented using C/S or B/S architecture.
