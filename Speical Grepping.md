@@ -8,3 +8,6 @@ for i in $(cat list.txt); do data=$(curl -A "Mozilla/4.0 (compatible; MSIE 5.01;
 cat output.txt | grep -o '<a .*href=.*>' | sed -e 's/<a /\n<a /g' | sed -e 's/<a .*href=['"'"'"]//' -e 's/["'"'"'].*$//' -e '/^$/ d'
 cat output.txt | tr '"' '\n' | tr "'" '\n' | grep -e '^https://' -e '^http://' -e'^//' | sort | uniq
 ```
+```
+ for urt in $(cat list.txt); do nmblookup -A $urt; done
+```
