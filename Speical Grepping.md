@@ -21,4 +21,5 @@ root@kali:~# cat list.txt
 
  for urt in $(cat list.txt); do nmblookup -A $urt; done
  for urt in $(cat list.txt); do smbclient -U '' -N -L //$urt; done
+ for urt in $(cat list.txt); do smbmap -H $urt; done
 ```
