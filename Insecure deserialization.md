@@ -55,3 +55,4 @@ ysoserial.exe -g WindowsIdentity -f Json.Net -c "cmd /c reg add "HKEY_LOCAL_MACH
 * Credit@https://speakerdeck.com/pwntester/attacking-net-serialization?slide=5
 * Credit@https://0xdf.gitlab.io/2020/02/15/htb-json.html
 * Credit@https://notsosecure.com/remote-code-execution-via-php-unserialize/?utm_campaign=calap.co&utm_medium=referral&utm_source=calap.co
+* Credit@https://0xrick.github.io/hack-the-box/arkham/
