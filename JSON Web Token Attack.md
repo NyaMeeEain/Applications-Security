@@ -41,6 +41,9 @@ echo -n "<JWT Token>" | openssl dgst -sha256 -mac HMAC -macopt hexkey:2d2d2d2d2d
  ```
 python -c "exec(\"import base64, binascii\nprint    base64.urlsafe_b64encode(binascii.a2b_hex('<JWT Token>')).replace('=','')\")"
 ```
-Credit@https://book.hacktricks.xyz/pentesting-web/hacking-jwt-json-web-tokens
-Credit@https://pentesterlab.com/exercises/jwt_iii/course
-Credit@https://medium.com/101-writeups/hacking-json-web-token-jwt-233fe6c862e6
+
+* Credit@https://book.hacktricks.xyz/pentesting-web/hacking-jwt-json-web-tokens
+
+* Credit@https://pentesterlab.com/exercises/jwt_iii/course
+
+* Credit@https://medium.com/101-writeups/hacking-json-web-token-jwt-233fe6c862e6
